@@ -27,3 +27,8 @@ Since its logic is copied from the bbswitch module, it works like that:
 	# sudo tee /proc/acpi/nvhda <<<OFF
 
 Check dmesg for messages.
+
+ToDo
+----
+
+ - Build/test DKMS
