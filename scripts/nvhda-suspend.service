@@ -1,0 +1,11 @@
+[Unit]
+Description=nvhda suspend
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=echo "OFF" >/proc/acpi/nvhda
+
+[Install]
+WantedBy=sleep.target
+

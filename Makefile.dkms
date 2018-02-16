@@ -1,0 +1,24 @@
+modname := nvhda
+DKMS := dkms
+modver := $(shell awk -F'"' '/define *NVHDA_VERSION/{print $$2}' < nvhda.c)
+
+# directory in which generated files are stored
+DKMS_DEST := /usr/src/$(modname)-$(modver)
+
+all: install
+
+src_install:
+	mkdir -p '$(DKMS_DEST)'
+	cp Makefile nvhda.c '$(DKMS_DEST)'
+	sed 's/#MODULE_VERSION#/$(modver)/' dkms/dkms.conf > '$(DKMS_DEST)/dkms.conf'
+
+build: src_install
+	$(DKMS) build -m nvhda -v $(modver)
+
+install: build
+	$(DKMS) install -m nvhda -v $(modver)
+
+uninstall:
+	$(DKMS) remove -m nvhda -v $(modver) --all
+
+.PHONY: all src_install build install uninstall

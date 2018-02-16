@@ -45,7 +45,7 @@
 #define NVHDA_VERSION "0.01"
 
 MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Toggle the discrete graphics card");
+MODULE_DESCRIPTION("Toggle the discrete graphics card audio");
 MODULE_AUTHOR("Peter Wu <lekensteyn@gmail.com>");
 MODULE_VERSION(NVHDA_VERSION);
 

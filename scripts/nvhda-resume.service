@@ -1,0 +1,11 @@
+[Unit]
+Description=nvhda resume
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=echo "ON" >/proc/acpi/nvhda
+
+[Install]
+WantedBy=suspend.target
+
