@@ -3,20 +3,33 @@ nvhda
 
 General info
 ------------
-Linux kernel module to turn on/off Nvidia HD audio device on notebooks
-Blatantly copied from Lekensteyn's bbswitch module
+Linux kernel module to turn on/off Nvidia HD audio device on notebooks. Blatantly copied from Lekensteyn's bbswitch module
 
 Install
 -------
 
 	# make
 	# sudo make install
-	# sudo modprobe nvhda
+
+Install using DKMS
+------------------
+
+	# sudo make -f Makefile.dkms
+
+Uninstall
+---------
+
+	# sudo make uninstall
+
+- or -
+	# sudo make -f Makefile.dkms uninstall
 
 Usage
 -----
 
-Since its logic is copied from the bbswitch module, it works like that:
+Since its logic is copied from the bbswitch module, it works like that.
+### Load Module
+ 	# sudo modprobe nvhda
 
 ### Get status:
 
@@ -37,4 +50,4 @@ See:
 ToDo
 ----
 
- - Build/test DKMS
+ - lots of things
