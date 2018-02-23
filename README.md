@@ -21,7 +21,8 @@ Uninstall
 
 	# sudo make uninstall
 
-- or -
+or
+
 	# sudo make -f Makefile.dkms uninstall
 
 Usage
