@@ -3,7 +3,9 @@ nvhda
 
 General info
 ------------
-Linux kernel module to turn on/off Nvidia HD audio device on notebooks. Blatantly copied from Lekensteyn's bbswitch module
+Linux kernel module to turn on/off Nvidia HD audio device on notebooks. Blatantly copied from Lekensteyn's bbswitch module.
+ - Due to a bug regarding re-reading the header type in kernels 4.9 - 4.13, this won't work on these series. Kernels 4.4, 4.14+ are known to work
+ - This module will (hopefully) once being superseded by Lukas Wunner's patches https://bugs.freedesktop.org/show_bug.cgi?id=75985#c37
 
 Install
 -------
