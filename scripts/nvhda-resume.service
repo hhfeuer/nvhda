@@ -4,7 +4,7 @@ After=suspend.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/echo "ON" >/proc/acpi/nvhda
+ExecStart=/bin/sh -c "/bin/echo ON >/proc/acpi/nvhda"
 
 [Install]
 WantedBy=suspend.target

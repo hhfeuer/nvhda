@@ -4,7 +4,7 @@ Before=sleep.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/echo "OFF" >/proc/acpi/nvhda
+ExecStart=/bin/sh -c "/bin/echo OFF >/proc/acpi/nvhda"
 
 [Install]
 WantedBy=sleep.target
