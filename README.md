@@ -3,6 +3,8 @@ nvhda
 
 General info
 ------------
+*should be obsolete for kernels >=5.4 as the HDA device is enabled per pci quirk. If not, use as a make-shift and report a bug to kernel bugzilla*
+
 Linux kernel module to turn on/off Nvidia HD audio device on notebooks. Blatantly copied from Lekensteyn's bbswitch module.
  - Due to a bug regarding re-reading the header type in kernels 4.9 - 4.13, this won't work on these series. Kernels 4.4, 4.14+ are known to work
  - This module will (hopefully) once being superseded by Lukas Wunner's patches https://bugs.freedesktop.org/show_bug.cgi?id=75985#c37
